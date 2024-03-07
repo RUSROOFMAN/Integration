@@ -24,10 +24,11 @@ public class StatisticsServiceTest {
     }
 
     @Test
-void findMid() {
+    void findMid() {
         StatisticsService service = new StatisticsService();
         long[] iincomesInBillion = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
         long expectedMid = 1;
         long actualMid = service.findMid(iincomesInBillion);
         Assertions.assertEquals(expectedMid, actualMid);
     }
+}
