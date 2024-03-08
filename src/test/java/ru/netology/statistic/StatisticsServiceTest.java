@@ -15,20 +15,11 @@ public class StatisticsServiceTest {
     }
 
     @Test
-    void findMin() {
+    void findMaxIn100() {
         StatisticsService service = new StatisticsService();
-        long[] iincomesInBillion = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
-        long expectedMin = 3;
-        long actualMin = service.findMin(iincomesInBillion);
-        Assertions.assertEquals(expectedMin, actualMin);
-    }
-
-    @Test
-    void findMid() {
-        StatisticsService service = new StatisticsService();
-        long[] iincomesInBillion = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
-        long expectedMid = 1;
-        long actualMid = service.findMid(iincomesInBillion);
-        Assertions.assertEquals(expectedMid, actualMid);
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12, 22,};
+        long expectedMax = 22;
+        long actualMax = service.findMax(incomesInBillions);
+        Assertions.assertEquals(expectedMax, actualMax);
     }
 }
